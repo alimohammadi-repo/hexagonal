@@ -1,5 +1,12 @@
 package dev.davivieira.topologyinventory.domain.vo;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
+
+@Getter
+@ToString
+@EqualsAndHashCode
 public class IP {
     private final String ipAddress;
     private final Protocol protocol;

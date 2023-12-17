@@ -10,9 +10,10 @@ public abstract sealed class Router extends Equipment
         permits CoreRouter, EdgeRouter {
 
     protected final RouterType routerType;
-    public static Predicate<Router>
-    getRouterTypePredicate(RouterType routerType){
-        return r -> r.getRouterType().equals(routerType);
+
+
+    public static Predicate<Equipment> getRouterTypePredicate(RouterType routerType){
+        return r -> ((Router)r).getRouterType().equals(routerType);
     }
 
     public static Predicate<Equipment>
